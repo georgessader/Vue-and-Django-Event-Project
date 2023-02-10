@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+	<h1>Welcome {{ username }}</h1>
+	<h1>{{ status }}</h1>
+	<form method="POST" action="home">
+		{% csrf_token %}
+		<input type="text" name="eventTitle">
+		<input type="date" name="eventDate">
+		<select name="eventStatus">
+			<option value="draft">Draft</option>
+			<option value="private">Private</option>
+			<option value="public">Public</option>
+		</select>
+		<input type="text" name="eventLocation">
+		<input type="submit" value="Create Event">
+	</form>
+</body>
+</html>
